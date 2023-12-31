@@ -12,28 +12,28 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['API_ID',"14410463"])
+API_HASH = environ['API_HASH',"032a84d7b99c3eb64502f58792b98cd9"]
+BOT_TOKEN = environ['BOT_TOKEN',"5101983824:AAFgKHKG-ZrNehxKqdXWJY-WeXZIpEh9g5A"]
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://img4.goodfon.com/original/1920x1200/6/e1/devushka-vzgliad-stul.jpg https://img4.goodfon.com/original/1920x1200/f/1c/jack-russell-model-litso-ruka-postel.jpg https://img4.goodfon.com/original/2560x1600/c/30/kirill-zakirov-model-poza-plate-nogi-kreslo-okno-stil.jpg https://img4.goodfon.com/original/1920x1200/f/4d/alexis-monroe-devushka-blondinka-krasotka-seksualnaia-privle.jpg https://img5.goodfon.com/original/2560x1600/d/a8/oleg-klimin-model-blondinka-krasotka-seksi-sidit-poza-figura.jpg')).split()
+PICS = (environ.get('PICS', 'https://te.legra.ph/file/fffdfc314b73aa283417c.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '2123077350').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1001577519156').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL',"1001597291412")
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Dingdi")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mageshda:poda123@cluster0.ux4g6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "moviesstorem")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
